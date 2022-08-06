@@ -1,5 +1,5 @@
 
-{
+{"type": "module",
   "name": "ecommercebackend",
   "version": "1.0.0",
   "description": "This application uses Node.js, Express, mySQL, and Sequelize in order to simulate a backend server for an E-commerce application. Using API routes, a user can GET all the information from a table (including the foreign keys) or on a single item, create a new item through a POST, update an item with PUT, or DELETE an item.",

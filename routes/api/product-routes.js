@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Product, Category, Tag, ProductTag } = require("../../models");
+import { Product, Category, Tag, ProductTag } from "../../models";
 
 // The `/api/products` endpoint
 // Get all products including associated category and tag data
@@ -133,4 +133,4 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
