@@ -1,12 +1,12 @@
-import seedCategories from './category-seeds';
-import seedProducts from './product-seeds';
-import seedTags from './tag-seeds';
-import seedProductTags from './product-tag-seeds';
+const seedCategories = require('./category-seeds');
+const seedProducts = require('./product-seeds');
+const seedTags = require('./tag-seeds');
+const seedProductTags = require('./product-tag-seeds');
 
-import { sync } from '../config/connection';
+const sequelize = require('../config/connection');
 
 const seedAll = async () => {
-  await sync({ force: true });
+  await sequelize.sync({ force: true });
   console.log('\n----- DATABASE SYNCED -----\n');
   await seedCategories();
   console.log('\n----- CATEGORIES SEEDED -----\n');

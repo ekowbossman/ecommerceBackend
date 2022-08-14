@@ -1,11 +1,11 @@
 // import models
-import Product, { belongsTo, belongsToMany } from './Product';
-import Category from './Category';
-import Tag, { belongsToMany as _belongsToMany } from './Tag';
-import ProductTag from './ProductTag';
+const Product = require('./Product');
+const Category = require('./Category');
+const Tag = require('./Tag');
+const ProductTag = require('./ProductTag');
 
 // Products belongsTo Category
-belongsTo(Category, {
+Product.belongsTo(Category, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE',
 });
@@ -16,7 +16,7 @@ Category.hasMany(Product, {
 });
 
 // Products belongToMany Tags (through ProductTag)
-belongsToMany(Tag, {
+Product.belongsToMany(Tag, {
   through: {
     model: ProductTag,
     unique: false
@@ -25,7 +25,7 @@ belongsToMany(Tag, {
 });
 
 // Tags belongToMany Products (through ProductTag)
-_belongsToMany(Product, {
+Tag.belongsToMany(Product, {
   through: {
     model: ProductTag,
     unique: false
@@ -33,7 +33,7 @@ _belongsToMany(Product, {
   as: 'products_with_tag'
 });
 
-export default {
+module.exports = {
   Product,
   Category,
   Tag,
