@@ -1,6 +1,6 @@
 // import models
 import Product, { belongsTo, belongsToMany } from './Product';
-import Category, { hasMany } from './Category';
+import Category from './Category';
 import Tag, { belongsToMany as _belongsToMany } from './Tag';
 import ProductTag from './ProductTag';
 
@@ -11,7 +11,7 @@ belongsTo(Category, {
 });
 
 // Categories have many Products
-hasMany(Product, {
+Category.hasMany(Product, {
   foreignKey: 'category_id'
 });
 

@@ -1,4 +1,4 @@
-import { Category } from '../models';
+const { Category } = require('../models').default;
 
 const categoryData = [
   {
@@ -20,4 +20,4 @@ const categoryData = [
 
 const seedCategories = () => Category.bulkCreate(categoryData);
 
-export default seedCategories;
+module.exports = seedCategories;

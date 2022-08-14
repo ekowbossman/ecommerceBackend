@@ -1,6 +1,6 @@
 import express, { json, urlencoded } from 'express';
 import routes from './routes';
-import sequelize from './config/connection';
+const sequelize = require('./config/connection').default.default;
 // import sequelize connection
 
 const app = express();

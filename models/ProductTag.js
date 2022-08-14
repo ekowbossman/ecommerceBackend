@@ -1,6 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 
-import sequelize from '../config/connection';
+const sequelize = require('../config/connection').default.default;
 
 class ProductTag extends Model {}
 

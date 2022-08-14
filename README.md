@@ -16,4 +16,8 @@ Use the schema.sql file in the db folder to create the databases.
 Use the .env.EXAMPLE file as a template for creating an .env with the proper credentials.
 Once the database has been created, use "npm run seed" in the terminal while in the root folder if example data is needed.
 
-# Video Walkthrough
+# Video Walkthrough:
+ 
+ https://drive.google.com/file/d/1dHM9LMlGZpHPJvrXTBF1AMU9prOEQcCX/view
+ 
+ https://youtu.be/B77vpkdpNO4
